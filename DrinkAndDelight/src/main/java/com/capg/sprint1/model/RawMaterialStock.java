@@ -12,18 +12,20 @@ public class RawMaterialStock {
 	double price;
 	String warehouseId;
 	Date deliveryDate;
-	Date manufactureDate;
-	Date expirydate;
+	String manufactureDate;
+	String expirydate;
 	String qualityCheck;
 	String processDate;
+	String qa;
+	
 	
 	public RawMaterialStock() {
 		super();
 	}
 
 	public RawMaterialStock(String orderId, String name, double pricePerUnit, double quantityValue, double quantityUnit,
-			double price, String warehouseId, Date deliveryDate, Date manufactureDate, Date expirydate,
-			String qualityCheck, String processDate) {
+			double price, String warehouseId, Date deliveryDate, String manufactureDate, String expirydate,
+			String qualityCheck, String processDate ,String qa) {
 		super();
 		this.orderId = orderId;
 		this.name = name;
@@ -37,6 +39,7 @@ public class RawMaterialStock {
 		this.expirydate = expirydate;
 		this.qualityCheck = qualityCheck;
 		this.processDate = processDate;
+		this.qa = qa;
 	}
 
 	public String getOrderId() {
@@ -103,19 +106,19 @@ public class RawMaterialStock {
 		this.deliveryDate = deliveryDate;
 	}
 
-	public Date getManufactureDate() {
+	public String getManufactureDate() {
 		return manufactureDate;
 	}
 
-	public void setManufactureDate(Date manufactureDate) {
+	public void setManufactureDate(String manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
 
-	public Date getExpirydate() {
+	public String getExpirydate() {
 		return expirydate;
 	}
 
-	public void setExpirydate(Date expirydate) {
+	public void setExpirydate(String expirydate) {
 		this.expirydate = expirydate;
 	}
 
@@ -134,6 +137,12 @@ public class RawMaterialStock {
 	public void setProcessDate(String processDate) {
 		this.processDate = processDate;
 	}
+	public String getQa() {
+		return qa;
+	}
+	public void setQa(String Qa) {
+		this.qa = Qa;
+	}
 
 	@Override
 	public String toString() {
@@ -141,8 +150,10 @@ public class RawMaterialStock {
 				+ ", quantityValue=" + quantityValue + ", quantityUnit=" + quantityUnit + ", price=" + price
 				+ ", warehouseId=" + warehouseId + ", deliveryDate=" + deliveryDate + ", manufactureDate="
 				+ manufactureDate + ", expirydate=" + expirydate + ", qualityCheck=" + qualityCheck + ", processDate="
-				+ processDate + "]";
+				+ processDate + ", qa=" + qa + "]";
 	}
+
+	
 
 	
 }

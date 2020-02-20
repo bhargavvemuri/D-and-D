@@ -6,8 +6,17 @@ public class RmStockServiceImpl implements RmStockService {
 
 	@Override
 	public String displayProcessDate(String orderIdOfRm, String processDateOfRm) {
-		RmStockDaoImpl RmStockDaoImplobj=new RmStockDaoImpl();
-		return  RmStockDaoImplobj.displayProcessDate(orderIdOfRm,processDateOfRm);
+		RmStockDaoImpl rmStockDaoImplobj=new RmStockDaoImpl();
+		return  rmStockDaoImplobj.displayProcessDate(orderIdOfRm,processDateOfRm);
 	}
+
+	@Override
+	public String displayChanges(String ProductOrderId) {
+		RmStockDaoImpl rmStockDaoImplobj=new RmStockDaoImpl();
+		return rmStockDaoImplobj.displayChanges(ProductOrderId);
+	}
+
+
+
 
 }
