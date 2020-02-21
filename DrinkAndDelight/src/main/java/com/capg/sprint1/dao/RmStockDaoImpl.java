@@ -19,12 +19,15 @@ public class RmStockDaoImpl implements RmStockDao{
 
 		list.put(order3.getOrderId(), order3);
 		list.put(order4.getOrderId(), order4);
-		RawMaterialStock ps= list.get(orderIdOfRm);
-		ps.setProcessDate(processDateOfRm);
-
-		System.out.println(ps);
-		
-		return null;
+		try {
+			RawMaterialStock ps = list.get(orderIdOfRm);
+			ps.setProcessDate(processDateOfRm);
+			System.out.println(ps);
+			return null;
+		}
+		catch(Exception e) {
+			return null;
+		}
 	}
 
 	@Override
@@ -35,13 +38,17 @@ public class RmStockDaoImpl implements RmStockDao{
 
 		list.put(order3.getOrderId(), order3);
 		list.put(order4.getOrderId(), order4);
-		RawMaterialStock ps= list.get(orderIdOfRm);
-		ps.setManufactureDate(ManufactureDate);
-		ps.setExpirydate(expirydate);
-		ps.setQualityCheck(qa);
-
-		System.out.println(ps);
-		return null;
+		try {
+			RawMaterialStock ps = list.get(orderIdOfRm);
+			ps.setManufactureDate(ManufactureDate);
+			ps.setExpirydate(expirydate);
+			ps.setQualityCheck(qa);
+			System.out.println(ps);
+			return null;
+		}
+		catch(Exception e) {
+			return null;
+		}
 	}
 
 	}
